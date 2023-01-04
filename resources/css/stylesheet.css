@@ -70,3 +70,20 @@ div[class=div-class][name~=name3]{
 #test1 h4{
     color: blue;
 }
+
+/* 3. 동위선택자 ------------------------ */
+/* a+b : a 요소 뒤에 b요소 하나만을 선택*/
+#test2+div{
+    background-color: yellow;
+}
+#test2+ul{
+    background-color: pink;
+    /* 바로 뒤에 있는 요소가 아니기때문에 반영되지 않음 */
+}
+/* a~b : a요소 뒤에있는 모든 b요소 다 선택. */
+#test2~div{
+    /*background-color: green;*/
+}
+#test2~ul{
+    /*background-color: deeppink;*/
+}
