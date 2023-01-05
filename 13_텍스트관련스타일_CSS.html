@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 관련 스타일</title>
+    <style>
+        #c{
+            color:blueviolet;
+            color:rgb(255, 192, 250); /* rgb컬러 범위는 0~255 */
+            color:#ff0000;
+            color:rgba(255, 192, 250, 0.45);
+            color:hsl(250, 50%, 50%); /* h: 색상값(0~360), s: 채도 %, l: 명도 % */
+            color:hsla(250, 50%, 50%, 0.5);
+        }   
+        #td1{text-decoration: underline;}
+        #td2{text-decoration: line-through;}
+        #td3{text-decoration: overline;}
+        #td4{text-decoration: none; color:grey;}
+    </style>
+</head>
+<body>
+    <h1>텍스트 관련 스타일(text~)</h1>
+
+    <h3>color: 텍스트의 색상을 지정</h3>
+    <pre id="c">
+        선택자{
+            color:색상명/16진수/rgb, rgba, hsl..
+        }
+    </pre>
+
+    <hr>
+
+    <h3>text-decoration : 텍스트에 줄을 긋거나 줄을 없앨때 사용</h3>
+    <pre>
+        선택자{
+            text-decoration: none/underline/overline/line-through;
+        }
+    </pre>
+
+    <ul>
+        <li id="td1">underline: 텍스트 영역 아래에 줄 긋기</li>
+        <li id="td2">line-through: 텍스트 영역 중간에 줄긋기</li>
+        <li id="td3">overline: 텍스트 영역 위에 줄긋기</li>
+    </ul>
+
+    <a href="https://www.naver.com" id="td4">네이버로 이동</a>
+    
+</body>
+</html>
