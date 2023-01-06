@@ -74,7 +74,14 @@
             /* 값은 몇이 되든 상관 없음. 단순히 값의 크기만으로 위쪽에 쌓을지 아래쪽에 쌓을지 결정됨 */
         }
 
-
+        .vis-test{
+            width:100px;
+            height:100px;
+        }
+        #vis{
+            /*display:none; 요소를 감춰주고, 공간도 차지 않는다. */
+            visibility: hidden; /* 요소는 감춰주되, 공간은 차지함. */
+        }
 
         .float-test{
             border: 1px solid black;
@@ -126,7 +133,10 @@
     <div class="vis-test" style="background: red;"></div>
     <div id="vis" class="vis-test" style="background-color: green;"></div>
     <div class="vis-test" style="background-color:yellow;"></div>
-    <p>이부분 못적음...</p>
+    <p>
+        visivility:hidden 속성은 공간은 차지하고있지만,
+        display:none은 공간마저도 차지하지 않는다.    
+    </p>
 
 
     <h3>float</h3>
