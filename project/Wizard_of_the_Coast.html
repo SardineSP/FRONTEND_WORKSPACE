@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizard_of_the_Coast_test</title>
     <style>
+
+        @font-face {
+            font-family: "DIN-Next-LT-Pro-Regular";
+            src: url("project_source/DIN-Next-LT-Pro-Regular.ttf") format("truetype");
+            font-weight: normal;
+        }
         .fixed-area{
             background-color: #02020270;
             position: fixed;
@@ -14,6 +20,7 @@
         }
 
         #topMenu{
+            font-family: "DIN-Next-LT-Pro-Regular";
             width: 1920px;
             height: 69px;
             outline: 1px dotted red;
@@ -22,21 +29,40 @@
         }
 
         #ul1{
+            margin: 0;
+            padding: 0;
             list-style-type: none;
         }
 
         .content1{
+            font-family: "DIN-Next-LT-Pro-Regular";
             background-color: #ffffff00;
             width: 561.69px;
             height: 361.23px;
             border: 1px dotted red;
+            
         }
 
         .content2{
+            font-family: "DIN-Next-LT-Pro-Regular";
             background-color: #ffffff00;
             width: 50px;
             height: 151.5px;
             border: 1px dotted red;
+        }
+
+        .content3{
+            background-color: #ffffff00;
+            width: 120px;
+            height: 56.84px;
+        }
+
+        .diagonal {
+            width: 1px;
+            height: 40px;
+            background-color: #6264da;
+            transform: rotate(45deg);
+            margin: 0px 0px 13.5px;
         }
 
 
@@ -60,11 +86,96 @@
             padding: 12px;
         }
 
-        .ourGames{
-            background-color: #090450;
-            width: 1903px;
-            height: 794.3px;
+        #arrow2{
+            background-color: #ffffff00;
+            padding: 0px;
         }
+
+        .ourGames{
+            background-image: url('project_source/big-blue-gradient-w1440up.webp');
+            width: 1920px;
+            height: 812px;
+        }
+
+        .ourCompany{
+            background-image: url('project_source/faint-bg.webp');
+            width: 1920px;
+            height: 830px;
+        }
+
+        .joinUs{
+            background-image: url('project_source/gamehub-career-section-banner.webp');
+            width: 1920px;
+            height: 404px;
+        }
+
+        .news{
+            background-color: white;
+            width: 1903px;
+            height: 751.13px;
+        }
+
+        .bar{
+            background-color: #0F051C;
+            width: 1903px;
+            height: 72px;
+        }
+
+        .container1 {
+            width: 246.88px; 
+            height: 363.45px; 
+            background-image: url('project_source/card-dnd-bg.webp');
+            background-position: center;
+            background-size: cover;
+            float: left;
+        }
+
+        .container2 {
+            width: 246.88px; 
+            height: 363.45px; 
+            background-image: url('project_source/4IuGySxB5B_733x540.webp');
+            background-position: center;
+            background-size: cover;
+            float: left;
+        }
+
+        .container3 {
+            width: 246.88px; 
+            height: 363.45px; 
+            background-image: url('project_source/card-spellslinger.webp');
+            background-position: center;
+            background-size: cover;
+            float: left;
+        }
+
+        .container4 {
+            width: 246.88px; 
+            height: 363.45px; 
+            background-image: url('project_source/card-mtg-bg.webp');
+            background-position: center;
+            background-size: cover;
+            float: left;
+        }
+
+        .container5 {
+            width: 246.88px; 
+            height: 363.45px; 
+            background-image: url('project_source/card-black-lotus.webp');
+            background-position: center;
+            background-size: cover;
+            float: left;
+        }
+
+        .justify-center{
+            justify-content: center;
+            align-items: center;
+        }
+
+        .justify-content-evenly{
+            justify-content: space-evenly;
+        }   
+
+
 
     </style>
 </head>
@@ -81,9 +192,15 @@
 </div>
 
 <div>
-    <div><img src="project_source/JHf3OI8Gz2_1920x700.jpg" width="1903" height="700"></div>    
-    <div id="test1" class="content1">컨텐츠 영역</div>
+    <div class="justify-center"><img src="project_source/JHf3OI8Gz2_1920x700.jpg"></div>    
+    <div id="test1" class="content1">
+        <img src="project_source/MTG_Primary_LL_4C_White_LG_V14.webp" width="528.13" height="181.61">
+        <div><strong>Assemble your mech army. Check out the latest set today!</strong></div>
+        <div><a href="https://magic.wizards.com/en/products/the-brothers-war?_ga=2.124397065.2049032891.1673395819-206914421.1666754523" target="_blank">VISIT SITE</a></div>
+    </div>
     <div id="test2" class="content2">
+        <div class="diagonal">
+        </div>
         <div>
             <img id="arrow" src="project_source/왼쪽화살표.png" width="22" height="22">
         </div>
@@ -95,17 +212,48 @@
 
 <div class="ourGames">
     <img src="project_source/our-games-en.svg" width="1141.8" height="176.33">
-    <img src="">
+    <div>
+        <div id="Games" class="container1"><img src="project_source/dnd-logo.webp" width="198" height="72"></div>
+        <div id="Games" class="container2"><img src="project_source/MX_Nav_EN.webp" width="198" height="80"></div>
+        <div id="Games" class="container3"><img src="project_source/spellslingers-logo.webp" width="198" height="62"></div>
+        <div id="Games" class="container4"><img src="project_source/arena-logo-medium.webp" width="198" height="67"></div>
+        <div id="Games" class="container5"><img src="project_source/mtgo-logo-card.webp" width="198" height="67"></div>
+    </div>
+    <div class="content3">
+        <div>
+            <img id="arrow2" src="project_source/왼쪽화살표.png" width="60" height="56.84">
+        </div>
+        <div>
+            <img id="arrow2" src="project_source/오른쪽화살표.png" width="60" height="56.84">
+        </div>
+    </div>
 </div>
 
+<div class="ourCompany">
 
+</div>
 
-    
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="joinUs">
+    <img src="project_source/w-flat.png" width="540" height="489">
+    <img src="project_source/en-careers-1439.png" width="856.34" height="186.05">
+</div>
+<div class="news">
+
+</div>
+
+<div class="bar">
+    <img src=""
+    <form action="" method="get">
+        <select name="national">
+            <option>English</option>
+            <option>简体字</option>
+            <option>繁体字</option>
+            <option>français</option>
+            <option>日本語</option>
+            <option>한국어</option>
+        </select>
+    </form>
+</div>
 
 </body>
 </html>

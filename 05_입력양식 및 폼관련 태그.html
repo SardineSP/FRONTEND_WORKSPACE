@@ -232,8 +232,74 @@
             색상 선택: <input type="color" name="color">
         </p>
 
+        <h3>type="file"</h3>
+        <p>
+            - 첨부하고자 하는 파일을 선택할 수 있는 input<br>
+              파일첨부 : <input type="file" name="uploadFile">
+        </p>
+    
+        <h3>type="hidden"</h3>
+        <p>
+            - 특정값을 사용자에게 입력받지 않고 화면에도 노출시키지도 않고
+            넘기고자 하는 값이 있을 경우 사용할 수 있는 input<br>
+            안보임 : <input type="hidden" name="hiddenvalue" value="안알랴줌">
+        </p>
+
+        <h3>type="submit/reset/button"</h3>
         <input type="submit">
+        <input type="reset">
+        <input type="button" value="일반버튼">
+
+        <button type="reset">초기화</button>
+        <button>일반버튼</button> 
+        <!--button 태그에 type속성 생략시 submit임.
+            따라서 form 태그 내에서 button 작성시 무조건 type 속성을 명시해주기-->
     </form>
+
+    <hr>
+
+    <h2>select 태그와 option 태그</h2>
+    <p>
+        - 사용자에게 직접 키보드로 값을 입력받는게 아니라
+          내가 제시한 여러 옵션들 중에서 선택할 수 있게끔 해주는 태그<br>
+        - 제출시 현재 선택된 (selected)값이 넘어감<br>
+        - 각각의 option에 value 속성값을 명시했을 경우 value값이 전달됨<br>
+          만일, 명시 안했을 경우 기본적으로 option 태그의 content영역(시작태그와 종료태그 사이)
+          의 값이 넘어감
+    </p>
+
+    <form action="" method="get">
+
+        국적 :
+        <select name="national">
+            <option value="ko">한국</option>
+            <option value="us">미국</option>
+            <option value="ch">중국</option>
+            <option value="uk">영국</option>
+            <option selected>선택안함</option>
+        </select>
+
+        <br><br>
+
+        <h4>HTML5에서 추가된 기능 datalist</h4>
+        <!-- datalist: 목록에 없더라도 직접 text상자에 값을 기술해서 넘길 수 있는
+                       select와 비슷한 태그.
+                       value 속성을 기술하면 value속성의 값이 리스트에 들어간다.
+                       보통 자동완성기능을 만들고 싶은 경우 사용 -->
+
+        좋아하는 색상 : <input type="text" name="color" list="colorList">
+        <datalist id="colorList">
+            <option value="black">검정색</option>
+            <option value="white">흰색</option>
+            <option value="skyblue">하늘색</option>
+            <option value="pink">핑크색</option>
+        </datalist>
+
+        <button type="submit">전송</button>
+
+        <progress value="50" max="100"></progress>
+    </form>
+
 
 </body>
 </html>
