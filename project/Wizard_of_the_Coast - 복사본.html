@@ -21,22 +21,22 @@
         .inline-block{
             display: inline-block;
         }
-
+        
         #topMenu{
             font-family: "DIN-Next-LT-Pro-Regular";
             width: 1920px;
             height: 69px;
             outline: 1px dotted red;
             padding: 8px 32px;
-            z-index: 0;
+            z-index: 10;
         }
-
+        
         #ul1{
             margin: 0;
             padding: 0;
             list-style-type: none;
         }
-
+        
         .content1{
             font-family: "DIN-Next-LT-Pro-Regular";
             background-color: #ffffff00;
@@ -45,6 +45,7 @@
             border: 1px dotted red;
             
         }
+        
 
         .content2{
             font-family: "DIN-Next-LT-Pro-Regular";
@@ -77,13 +78,35 @@
         }
 
 
-        #test1{
+        .main-banner{
+            width: 529.688px;
+            height: 329.234px;
             margin: 70px;
             padding: 16px;
-            background-color: green;
-            top: 100px;
-            left: 606px;
             position:absolute;
+            top: 180px;
+            left: 640px;
+        }
+        .catch{
+            width: 519.69px; 
+            height: 24px;
+            text-align: center; 
+            color:white; 
+            text-shadow: 0px 10px 10px black;
+        }
+        .box-form{
+            width: 529.688px;
+            height: 70.438px;
+            margin: 21.333px;
+        }
+        #box{
+            box-shadow: 0px 0px 10px 3px rgb(128, 128, 128);
+            background-color: rgb(67, 67, 214);
+            position: relative;
+            top: 30px;
+            left: 155px;
+            width: 174.38px;
+            height: 59.78px;
         }
 
         #test2{
@@ -157,7 +180,16 @@
         #joinUs-form{
             background-image: url('project_source/gamehub-career-section-banner.webp');
             width: 1903px;
-            height: 492.78px;
+            height: 266.781px;
+            padding: 116px 0 110px;
+        }
+
+        .joinUs-content{
+            width: 1216px;
+            height: 202.781px;
+            padding: 32px;
+            margin: 0 311.5px;
+            position: relative;
         }
 
         #news-form{
@@ -243,11 +275,19 @@
 </div>
 
 <div>
-    <div class="justify-center"><img src="project_source/JHf3OI8Gz2_1920x700.jpg"></div>    
-    <div id="test1" class="content1">
+    <div style="position: relative;">
+        <img src="project_source/JHf3OI8Gz2_1920x700.jpg">
+    </div>    
+    <div class="main-banner">
         <img src="project_source/MTG_Primary_LL_4C_White_LG_V14.webp" width="528.13" height="181.61">
-        <div><strong>Assemble your mech army. Check out the latest set today!</strong></div>
-        <div><a href="https://magic.wizards.com/en/products/the-brothers-war?_ga=2.124397065.2049032891.1673395819-206914421.1666754523" target="_blank">VISIT SITE</a></div>
+        <div class="catch"><b>Assemble your mech army. Check out the latest set today!</b></div>
+        <div class="box-form">
+            <a href="https://magic.wizards.com/en/products/the-brothers-war?_ga=2.124397065.2049032891.1673395819-206914421.1666754523" target="_blank">
+                <div id="box" style="text-align: center; font-size: 18px; color: white;">
+                    <b>VISIT SITE</b>
+                </div>
+            </a>
+        </div>
     </div>
     <div id="test2" class="content2">
         <div class="diagonal">
@@ -315,8 +355,12 @@
 </div>
 
 <div id="joinUs-form">
-    <img src="project_source/w-flat.png" width="540" height="489">
+    <div class="joinUs-content">
+    <div>
+        <img src="project_source/w-flat.png" width="540" height="489">
+    </div>
     <img src="project_source/en-careers-1439.png" width="856.34" height="186.05">
+    </div>
 </div>
 <div id="news-form">
 
