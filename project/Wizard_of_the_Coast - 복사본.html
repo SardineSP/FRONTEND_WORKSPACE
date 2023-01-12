@@ -60,6 +60,38 @@
             width: 120px;
             height: 56.84px;
         }
+        .triangle1 {
+            width: 0px;
+            height: 0px;
+            border-top: 80px solid #ffffff;
+            border-left: 0px solid transparent;
+            border-right: 1920px solid transparent;
+            position: absolute;
+            top: 2358.4px;
+            z-index: 2;
+        }
+
+        .triangle2 {
+            width: 0px;
+            height: 0px;
+            border-bottom: 96px solid #0367fc;
+            border-left: 0px solid transparent;
+            border-right: 1903px solid transparent;
+            position: absolute;
+            top: 2756px;
+            z-index: 4;
+        }
+
+        .triangle3 {
+            width: 0px;
+            height: 0px;
+            border-bottom: 80px solid #ffffff;
+            border-left: 0px solid transparent;
+            border-right: 1920px solid transparent;
+            position: absolute;
+            top: 2772px;
+            z-index: 5;
+        }
 
         .diagonal {
             width: 1px;
@@ -108,6 +140,15 @@
             width: 174.38px;
             height: 59.78px;
         }
+        #box2{
+            box-shadow: 0px 0px 10px 3px rgb(128, 128, 128);
+            background-color: rgb(67, 67, 214);
+            position: relative;
+            top: -30px;
+            left: 0px;
+            width: 183.906px;
+            height: 59.781px;
+        }
 
         #test2{
             top: 500px;
@@ -148,7 +189,7 @@
 
         #ourCompany-form{
             font-family: "DIN-Next-LT-Pro-Regular";
-            background-image: url('project_source/faint-bg.webp');
+            background-color: white;
             background-size: cover;
             width: 1920px;
             height: 635.312px;
@@ -190,6 +231,18 @@
             padding: 32px;
             margin: 0 311.5px;
             position: relative;
+        }
+
+        .joinUs-text{
+            font-family: "DIN-Next-LT-Pro-Regular";
+            color: white;
+            font-size: 52px;
+            width: 506.656px;
+            height: 202.781px;
+            position: relative;
+            bottom: 50px;
+            left: 600px;
+            z-index: 5;
         }
 
         #news-form{
@@ -280,7 +333,7 @@
     </div>    
     <div class="main-banner">
         <img src="project_source/MTG_Primary_LL_4C_White_LG_V14.webp" width="528.13" height="181.61">
-        <div class="catch"><b>Assemble your mech army. Check out the latest set today!</b></div>
+        <div class="catch" style="text-align:center;"><b>Assemble your mech army. Check out the latest set today!</b></div>
         <div class="box-form">
             <a href="https://magic.wizards.com/en/products/the-brothers-war?_ga=2.124397065.2049032891.1673395819-206914421.1666754523" target="_blank">
                 <div id="box" style="text-align: center; font-size: 18px; color: white;">
@@ -332,6 +385,7 @@
             <div style="text-align: center;">
                 <img src="project_source/wotc-logo (2).png" width="240" height="127.31"> 
             </div>
+            <br><br>
             <div >
                 <img src="project_source/1번.jpg" width="207" height="144">
                 <a href="https://www.archetype-entertainment.com/">
@@ -354,13 +408,28 @@
     </div>
 </div>
 
+<div class="triangle1"></div>
+<div class="triangle2"></div>
+<div class="triangle3"></div>
 <div id="joinUs-form">
     <div class="joinUs-content">
-    <div>
-        <img src="project_source/w-flat.png" width="540" height="489">
+        <div class="joinUs-text">
+            <p>
+                Craft Our Next Game -
+                <br>
+                <b>Join Us</b>
+            </p>
+            <a href="https://company.wizards.com/en/careers" target="_blank">
+                <div id="box2" style="text-align: center; font-size: 18px; color: white;">
+                    <b>FIND A JOB</b>
+                </div>
+            </a>
+        </div>
+        
+        
+        <img src="project_source/w-flat.png" width="540" height="489" style="z-index: 3; position:relative; top:-400px; display: inline-block; z-index: 3;">
     </div>
-    <img src="project_source/en-careers-1439.png" width="856.34" height="186.05">
-    </div>
+    <img src="project_source/en-careers-1439.png" width="856.34" height="186.05" style="position:relative; display: inline-block; left: 1044px; top: -75px;">
 </div>
 <div id="news-form">
 
