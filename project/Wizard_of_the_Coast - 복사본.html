@@ -13,7 +13,7 @@
             font-weight: normal;
         }
         .fixed-area{
-            background-color: #02020270;
+            background-color: rgba(0, 0, 0, 0.9);
             position: fixed;
             top: 0;
             left: 0;
@@ -24,10 +24,10 @@
         
         #topMenu{
             font-family: "DIN-Next-LT-Pro-Regular";
-            width: 1920px;
-            height: 69px;
+            width: 1856px;
+            height: 53px;
             outline: 1px dotted red;
-            padding: 8px 32px;
+            padding: 8px 32px 8px 32px;
             z-index: 10;
         }
         
@@ -156,6 +156,13 @@
             position:absolute;
         }
 
+        .container {
+            width: 246.88px; 
+            height: 363.45px; 
+            background-position: center;
+            background-size: cover;
+        }
+
         #arrow{
             background-color: purple;
             padding: 12px;
@@ -170,6 +177,7 @@
             background-image: url('project_source/big-blue-gradient-w1440up.webp');
             width: 1920px;
             height: 812px;
+            position: relative;
         }
 
         #introduce{
@@ -309,14 +317,6 @@
             height: 72px;
         }
 
-        .container {
-            width: 246.88px; 
-            height: 363.45px; 
-            background-position: center;
-            background-size: cover;
-            float: left;
-        }
-
         .justify-center{
             justify-content: center;
             align-items: center;
@@ -325,8 +325,6 @@
         .justify-content-evenly{
             justify-content: space-evenly;
         }   
-
-
 
     </style>
 </head>
@@ -344,7 +342,7 @@
 
 <div>
     <div style="position: relative;">
-        <img src="project_source/JHf3OI8Gz2_1920x700.jpg">
+        <img src="project_source/JHf3OI8Gz2_1920x700.jpg" style="transform:skew(-3deg, 0deg);">
     </div>    
     <div class="main-banner">
         <img src="project_source/MTG_Primary_LL_4C_White_LG_V14.webp" width="528.13" height="181.61">
@@ -370,8 +368,8 @@
 </div>
 
 <div id="ourGames-form">
-    <img src="project_source/our-games-en.svg" width="1141.8" height="176.33">
-    <div>
+    <img src="project_source/our-games-en.svg" width="1141.8" height="176.33" style="transform:skew(-3deg, 0deg);">
+    <div class="container inline-block">
         <div id="Games" class="container" style="background-image: url(project_source/card-dnd-bg.webp);">
             <img src="project_source/dnd-logo.webp" width="198" height="72" style="position: relative; top:250px; left: 25px;">
         </div>
@@ -391,6 +389,7 @@
             <img src="project_source/DandD-logo.webp" width="198" height="105" style="position: relative; top:220px; left: 25px;">
         </div>
     </div>
+
     <div class="content3">
         <div>
             <img id="arrow2" src="project_source/왼쪽화살표.png" width="60" height="56.84">
@@ -492,9 +491,15 @@
             </div>
             <div class="news-form-contain-block inline-block">
                 <div id="news-form-thumb" style="background-image: url(project_source/뉴스4.jpg)"></div>
-                <div id="news-form-title"> Wizards of the Coast and Pride 2022 </div>
+                <div id="news-form-title"> Wizards of the Coast and Pride<br>2022 </div>
             </div>
         </div>
+
+        <div class="button-list">
+            <button class="button-left">← Left</button>
+            <button class="button-right">Right →</button>
+        </div>
+
     </div>
 </div>
 
