@@ -1,0 +1,19 @@
+.joinUs-content{
+    width: 1216px;
+    height: 202.781px;
+    padding: 32px;
+    margin: 0 311.5px;
+    position: relative;
+}
+
+.joinUs-text{
+    font-family: "DIN-Next-LT-Pro-Regular";
+    color: white;
+    font-size: 52px;
+    width: 506.656px;
+    height: 202.781px;
+    position: relative;
+    bottom: 50px;
+    left: 600px;
+    z-index: 5;
+}

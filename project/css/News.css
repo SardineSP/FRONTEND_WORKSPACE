@@ -1,0 +1,57 @@
+#news-form{
+    background-color: white;
+    width: 1903px;
+    height: 751.125px;
+}
+.news-form-content{
+    font-family: "DIN-Next-LT-Pro-Regular";
+    font-size: 52px;
+    width: 1280px;
+    height: 691.125px;
+    padding: 30px;
+    margin: 0 311.5px;
+}
+.news-form-categoty{
+    width: 1728px;
+    height: 29px;
+}
+.news-form-container{
+    width: 1280px;
+    height: 481.281px;
+    padding: 32px;
+}
+.news-form-contain-block{
+    width: 301px;
+    height: 481.281px;
+    background-color: #290D4A;
+    position: relative;
+}
+#news-form-thumb{
+    width: 301px;
+    height: 334px;
+    background-position: center;
+    background-size: cover;
+}
+#news-form-tag{
+    font-family: "DIN-Next-LT-Pro-Regular";
+    font-size: 14px;
+    font-weight: bold;
+    width: 120.911;
+    height: 15.986;
+    padding: 6.5px 10.833px 2.889px 10.833px;
+    color: #ffffff;
+    background-color: #6E64DA;
+    text-align: center;
+    position: absolute;
+    top: 320px;
+    
+}
+#news-form-title{
+    font-family: "DIN-Next-LT-Pro-Regular";
+    font-weight: bold;
+    width: 281.87px;
+    height: 98.734px;
+    padding: 25.272px 0px 23.4px 18.72px;
+    font-size: 18px;
+    color: #ffffff;
+}

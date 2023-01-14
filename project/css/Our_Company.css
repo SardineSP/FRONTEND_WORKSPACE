@@ -1,0 +1,30 @@
+#ourCompany-form{
+    font-family: "DIN-Next-LT-Pro-Regular";
+    background-color: white;
+    background-size: cover;
+    width: 1920px;
+    height: 635.312px;
+    padding: 140px 0;
+    margin: 200px 0 0;
+}
+
+.ourCompany-contents{
+    width: 1376px;
+    height: 635.312px; 
+    padding: 0 32px;
+    margin: 0 231.5px;
+}
+
+.ourCompany-intro{
+    width: 550.406px;
+    height: 243.5px;
+    margin: 0 0 42px;
+    padding: 0 68.7969px;
+    position: relative;
+    top: -200px;
+}
+
+.ourCompany-Games{
+    width: 661px;
+    height: 635.312;
+}

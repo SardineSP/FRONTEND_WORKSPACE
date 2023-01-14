@@ -1,0 +1,31 @@
+#main-banner-form{
+    width: 1920px;
+    height: 800px;
+}
+.main-banner{
+    width: 529.688px;
+    height: 329.234px;
+    margin: 70px;
+    padding: 16px;
+    position:absolute;
+    top: 180px;
+    left: 640px;
+}
+.catch{
+    width: 561.69px; 
+    line-height: 48px;
+    padding: 5px;
+    text-align: center; 
+    color:white; 
+    text-shadow: 0px 10px 10px black;
+}
+.box-container{
+    width: 561.69px;
+    height: 70.438px;
+    margin: 21.333px 0px 21.333px;
+    text-align: center;
+}
+.button{
+    width: 174.375px;
+    line-height: 59.781px;
+}
