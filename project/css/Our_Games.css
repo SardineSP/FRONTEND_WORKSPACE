@@ -1,19 +1,72 @@
-
-
 .ourGames-form-container{
     width: 1216px;
     height: 450.297px;
-    padding: 32px 32px 32px 32px;
+    padding: 32px;
+    margin: 0px 311.5px;
+    white-space: nowrap;
 }
 .ourGames-form-contain-block{
-    width: 186.875px;
-    height: 323.453px;
+    width: 246.88px;
+    height: 363.45px;
+    position: relative;
+    margin: 0 10px;
+
+}
+#ourGames-form-thumb{
+    width: 246.88px;
+    height: 363.45px;
     background-position: center;
     background-size: cover;
 }
-
-#ourGames-logo{
-    text-align: center;
+#ourGames-form-logo{
+    width: 198px;
     position: absolute;
-    top: 320px;
+    top: 250px;
+    left: 25px;
 }
+#news-form-title{
+    font-family: "DIN-Next-LT-Pro-Regular";
+    font-weight: bold;
+    width: 281.87px;
+    height: 98.734px;
+    padding: 25.272px 0px 23.4px 18.72px;
+    font-size: 18px;
+    color: #ffffff;
+}
+.ourGames-form-switch{
+    width: 1216px;
+    height: 56.844px;
+    margin: 30px 0px 0px;
+    position: relative;
+}
+.ourGames-form-switch-button{
+    width: 60px; 
+    line-height: 56.84px;
+    text-align: center;
+    float: right;
+}
+
+* {margin:0;padding:0;box-sizing:content-box;}
+        ul, li {list-style:none;}
+
+        .slidebox2 {max-width:1920px; margin:0; position:absolute; left:230px;}
+        .slidebox2 .slidelist2 {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+        .slidebox2 .slidelist2 .slideitem2 {position:relative;display:inline-block;vertical-align:middle;background-color: rgba(255, 255, 255, 0);width:300px;transition:all 1s;}
+        .slidebox2 .slidelist2 .slideitem2 > a {display:block;width:auto;position:relative;}
+        .slidebox2 .slidelist2 .slideitem2 > a img {max-width:100%;}
+
+        [name="slide2"] {display:none;}
+        #slide11:checked ~ .slidelist2 .slideitem2 {left:0;}
+        #slide12:checked ~ .slidelist2 .slideitem2 {left:-300px;}
+        #slide13:checked ~ .slidelist2 .slideitem2 {left:-300px;}
+        #slide14:checked ~ .slidelist2 .slideitem2 {left:-300px;}
+        #slide15:checked ~ .slidelist2 .slideitem2 {left:-300px;}
+        #slide16:checked ~ .slidelist2 .slideitem2 {left:-300px;}
+
+        .slide-control2 [class*="control2"] {display:none;}
+        #slide11:checked ~ .slide-control2 .control11 {display:block;}
+        #slide12:checked ~ .slide-control2 .control12 {display:block;}
+        #slide13:checked ~ .slide-control2 .control13 {display:block;}
+        #slide14:checked ~ .slide-control2 .control14 {display:block;}
+        #slide15:checked ~ .slide-control2 .control15 {display:block;}
+        #slide16:checked ~ .slide-control2 .control16 {display:block;}

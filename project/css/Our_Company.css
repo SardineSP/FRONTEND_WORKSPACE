@@ -1,11 +1,11 @@
-#ourCompany-form{
-    font-family: "DIN-Next-LT-Pro-Regular";
-    background-color: white;
-    background-size: cover;
-    width: 1920px;
-    height: 635.312px;
-    padding: 140px 0;
-    margin: 200px 0 0;
+#introduce{
+    font-size: 72px;
+}
+#inside{
+    font-size: 21px;
+    width: 424.406px;
+    height: 126px;
+    padding: 15.750px 63px;
 }
 
 .ourCompany-contents{
@@ -27,4 +27,12 @@
 .ourCompany-Games{
     width: 661px;
     height: 635.312;
+}
+
+.line {
+    width: 42px;
+    height: 3px;
+    background-color: #000000;
+    position: relative;
+    top: 116px;
 }

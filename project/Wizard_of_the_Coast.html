@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizard_of_the_Coast_test</title>
 
+    <link href="css/Menu_Bar.css" rel="stylesheet">
     <link href="css/Main.css" rel="stylesheet">
     <link href="css/Our_Games.css" rel="stylesheet">
     <link href="css/Our_Company.css" rel="stylesheet">
@@ -13,140 +14,82 @@
     <link href="css/News.css" rel="stylesheet">
 
     <style>
+        @font-face {
+            font-family: "DIN-Next-LT-Pro-Regular";
+            src: url("project_source/DIN-Next-LT-Pro-Regular.ttf") format("truetype");
+            font-weight: normal;
+        }
+
         #ourGames-form{
             background-image: url('project_source/big-blue-gradient-w1440up.webp');
             width: 1920px;
             height: 514.297px;
             padding: 200px 0px 80px;
             margin: -81px 0px 0px;
-        }   
+        }  
+        
+        #ourCompany-form{
+            background-image: url('project_source/faint-bg.webp');
+            font-family: "DIN-Next-LT-Pro-Regular";
+            background-size: cover;
+            width: 1920px;
+            height: 635.312px;
+            padding: 140px 0;
+            margin: -81px 0 0;
+        }
+
         #joinUs-form{
             background-image: url('project_source/gamehub-career-section-banner.webp');
-            width: 1903px;
+            width: 1920px;
             height: 266.781px;
             padding: 116px 0 110px;
+            margin: -81px 0 0;
+            position: relative;
         }
-        @font-face {
-            font-family: "DIN-Next-LT-Pro-Regular";
-            src: url("project_source/DIN-Next-LT-Pro-Regular.ttf") format("truetype");
-            font-weight: normal;
+
+        .inline-block{
+            display: inline-block;
         }
+        .bottom-right {
+	        background: linear-gradient(-45deg, transparent 10px, #6e64da 0);
+        }
+        .background-form{
+            width:1920px;
+            height:812px;
+            background-size: cover;
+        }
+
+        .clip-path {
+	        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        }
+        .clip-path2 {
+	        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+        }
+        .clip-path3 {
+	        clip-path: polygon(0 0, 100% 8%, 100% 92%, 0 100%);
+        }
+        .clip-path4 {
+	        clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 87%);
+        }
+        .clip-path5 {
+	        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 90%);
+        }
+
         .fixed-area{
             background-color: rgba(0, 0, 0, 0.9);
             position: fixed;
             top: 0;
             left: 0;
         }
-        .inline-block{
-            display: inline-block;
-        }
-
-        .bottom-right {
-	        background: linear-gradient(-45deg, transparent 10px, #6e64da 0);
-        }
-        
-        .background-form{
-            width:1920px;
-            height:812px;
-            background-size: cover;
-        }
-        .clip-path {
-	        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);;
-        }
-        .clip-path2 {
-	        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);;
-        }
-
-        #topMenu{
-            font-family: "DIN-Next-LT-Pro-Regular";
-            width: 1920px;
-            height: 69px;
-            outline: 1px dotted red;
-            padding: 8px 32px;
-            z-index: 10;
-        }
-        
-        #ul1{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-        
-        .content1{
-            font-family: "DIN-Next-LT-Pro-Regular";
-            background-color: #ffffff00;
-            width: 561.69px;
-            height: 361.23px;
-            border: 1px dotted red;
-            
-        }
         
 
-        .content2{
-            font-family: "DIN-Next-LT-Pro-Regular";
-            background-color: #ffffff00;
-            width: 50px;
-            height: 151.5px;
-            border: 1px dotted red;
-        }
+        .slidebox .slide-control [class*="control"] label {position:absolute;z-index:9;padding:20px; border-style: groove; border-width: 2px; border-color: #6E64DA; cursor:pointer;}
+        .slidebox .slide-control [class*="control"] label.prev {right:30px; top: 506px; background:rgba(41,13,74,.35) url('project_source/왼쪽흰색화살표.png') center center / 20px no-repeat;}
+        .slidebox .slide-control [class*="control"] label.next {right:30px; top: 550px; background:rgba(41,13,74,.35) url('project_source/오른쪽흰색화살표.png') center center / 20px no-repeat;}
 
-        .content3{
-            background-color: #ffffff00;
-            width: 120px;
-            height: 56.84px;
-        }
-        
-
-        .diagonal {
-            width: 1px;
-            height: 40px;
-            background-color: #6264da;
-            transform: rotate(45deg);
-            margin: 0px 0px 13.5px;
-        }
-
-        .line {
-            width: 42px;
-            height: 3px;
-            background-color: #000000;
-            position: relative;
-            top: 112px;
-        }
-
-
-        
-
-        
-
-        #box2{
-            box-shadow: 0px 0px 10px 3px rgb(128, 128, 128);
-            background-color: rgb(67, 67, 214);
-            position: relative;
-            top: -30px;
-            left: 0px;
-            width: 183.906px;
-            height: 59.781px;
-        }
-
-        #test2{
-            top: 500px;
-            left: 1800px;
-            position:absolute;
-        }
-
-        #arrow{
-            background-color: purple;
-            padding: 12px;
-        }
-
-        #arrow2{
-            background-color: #ffffff00;
-            padding: 0px;
-        }
-
-        
-
-        
+        .slidebox2 .slide-control2 [class*="control2"] label {position:absolute;z-index:9; padding:20px; cursor:pointer;}
+        .slidebox2 .slide-control2 [class*="control2"] label.prev2 {right:10px; top: 506px; background:rgba(41,13,74,.35) url('project_source/왼쪽흰색화살표.png') center center / 20px no-repeat;}
+        .slidebox2 .slide-control2 [class*="control2"] label.next2 {right:50px; top: 506px; background:rgba(41,13,74,.35) url('project_source/오른쪽흰색화살표.png') center center / 20px no-repeat;}
 
         
         
@@ -156,82 +99,172 @@
             width: 1903px;
             height: 72px;
         }
-
-
-
-
-    </style>
+        
+        
+        
+        
+        
+        </style>
 </head>
 <body>
 
 <div id= "topMenu" class="fixed-area">    
-    <img src="project_source/wotc-logo.png" width="99px" height="52.47px">
-    <ul id="ul1">
-        <li>GAMES</li>
-        <li>JOIN US</li>
-        <li>WHO WE ARE</li>
-        <li>NEWS</li>
-    </ul>
+    <div><img src="project_source/wotc-logo.png" width="99px" height="52.47px" style="float: left;"></div>
+    <div id="menu-bar1">
+        <ul id="navi">
+            <li><a>GAMES</a></li>
+            <li>
+                <a href="">JOIN US</a>
+                <ul>
+                    <li><a width="89.156px" height="19px" padding="12px 16px" href="">JOIN US</a></li>
+                    <li><a href="">CAREERS</a></li>
+                    <li><a href="">DIVERSITY, EQUITY, & INCLUSION</a></li>
+                    <li>CONNECT WITH US</li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </li>
+            <li><a>WHO WE ARE</a></li>
+            <li><a>NEWS</a></li>
+        </ul>
+    </div>
 </div>
 
-<div id="main-banner-form">
-    <img src="project_source/JHf3OI8Gz2_1920x700.jpg" width="1920px" height="800"; class="clip-path">   
-    <div class="main-banner">
-        <img src="project_source/MTG_Primary_LL_4C_White_LG_V14.webp" width="528.13" height="181.61">
-        <div class="catch" style="text-align:center;"><b>Assemble your mech army. Check out the latest set today!</b></div>
-        <div class="box-container">
-            <a href="https://magic.wizards.com/en/products/the-brothers-war?_ga=2.124397065.2049032891.1673395819-206914421.1666754523" target="_blank">
-                <div class="button bottom-right inline-block">
-                    <b>VISIT SITE</b>
+<div class="slidebox">
+    <input type="radio" name="slide" id="slide01" checked>
+    <input type="radio" name="slide" id="slide02">
+    <input type="radio" name="slide" id="slide03">
+        <ul class="slidelist">
+            <li class="slideitem">
+                <a><img src="project_source/JHf3OI8Gz2_1920x700.jpg"></a>
+            </li>
+            <li class="slideitem">
+                <a><img src="project_source/메인배너2.webp"></a>
+            </li>
+            <li class="slideitem">
+                <a><video src="//videos.ctfassets.net/ojjl8z69k7ls/5byj36sLtoXIb5J0OKYSom/3f03682bf84943789800f8630273a635/Arena-Trailer-GH.mp4" width="1920px" height="700px" controls autoplay loop></a>
+            </li>
+        </ul>
+        <div class="slide-control">
+            <div class="control01">
+                <label for="slide03" class="prev"></label>
+                <label for="slide02" class="next"></label>
+            </div>
+            <div class="control02">
+                <label for="slide01" class="prev"></label>
+                <label for="slide03" class="next"></label>
+            </div>
+            <div class="control03">
+                <label for="slide02" class="prev"></label>
+                <label for="slide01" class="next"></label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-banner-info">
+    <img src="project_source/MTG_Primary_LL_4C_White_LG_V14.webp" width="500" height="181.61">
+    <div class="catch" style="text-align:center;"><b>Assemble your mech army. Check out the latest set today!</b></div>
+    <div class="box-container">
+        <a href="https://magic.wizards.com/en/products/the-brothers-war?_ga=2.124397065.2049032891.1673395819-206914421.1666754523" target="_blank">
+            <div class="button bottom-right inline-block">
+                <b>VISIT SITE</b>
+            </div>
+        </a>
+    </div>
+</div>
+    
+<div id="ourGames-form" class="clip-path2">
+    <img src="project_source/our-games-en.svg" width="1141.8" height="176.33" style="position:absolute; top: 660px;">
+    
+    <div class="slidebox2">
+        <input type="radio" name="slide2" id="slide11" checked>
+        <input type="radio" name="slide2" id="slide12">
+        <input type="radio" name="slide2" id="slide13">
+        <input type="radio" name="slide2" id="slide14">
+        <input type="radio" name="slide2" id="slide15">
+        <input type="radio" name="slide2" id="slide16">
+            <ul class="slidelist2">
+                <li class="slideitem2">
+                    <div class="ourGames-form-contain-block inline-block">
+                        <div id="ourGames-form-thumb" style="background-image: url('project_source/게임1.webp')"></div>
+                        <img src="project_source/dnd-logo.webp" id="ourGames-form-logo">
+                    </div>
+                </li>
+                <li class="slideitem2">
+                    <a>
+
+                    </a>
+                    <div class="ourGames-form-contain-block inline-block">
+                        <div id="ourGames-form-thumb" style="background-image: url(project_source/게임2.webp)"></div>
+                        <img src="project_source/MX_Nav_EN.webp" id="ourGames-form-logo">
+                    </div>
+                </li>
+                <li class="slideitem2">
+                    <a>
+                        <div class="ourGames-form-contain-block inline-block">
+                            <div id="ourGames-form-thumb" style="background-image: url(project_source/게임3.webp)"></div>
+                            <img src="project_source/spellslingers-logo.webp" id="ourGames-form-logo">
+                        </div>  
+                    </a>
+                </li>
+                <li class="slideitem2">
+                    <a>
+                        <div class="ourGames-form-contain-block inline-block">
+                            <div id="ourGames-form-thumb" style="background-image: url(project_source/게임4.webp)"></div>
+                            <img src="project_source/arena-logo-medium.webp" id="ourGames-form-logo">
+                        </div>  
+                    </a>
+                </li>
+                <li class="slideitem2">
+                    <a>
+                        <div class="ourGames-form-contain-block inline-block">
+                            <div id="ourGames-form-thumb" style="background-image: url(project_source/게임5.webp)"></div>
+                            <img src="project_source/mtgo-logo-card.webp" id="ourGames-form-logo">
+                        </div>  
+                    </a>
+                </li>
+                <li class="slideitem2">
+                    <a>
+                        <div class="ourGames-form-contain-block inline-block">
+                            <div id="ourGames-form-thumb" style="background-image: url(project_source/게임6.webp)"></div>
+                            <img src="project_source/DandD-logo.webp" id="ourGames-form-logo">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="slide-control2">
+                <div class="control11">
+                    <label for="slide16" class="prev2"></label>
+                    <label for="slide12" class="next2"></label>
                 </div>
-            </a>
-        </div>
-    </div>
-    <div id="test2" class="content2">
-        <div class="diagonal">
-        </div>
-        <div>
-            <img id="arrow" src="project_source/왼쪽화살표.png" width="22" height="22">
-        </div>
-        <div>
-            <img id="arrow" src="project_source/오른쪽화살표.png" width="22" height="22">
-        </div>
-    </div>
-</div>
-
-<div id="ourGames-form">
-    <img src="project_source/our-games-en.svg" width="1141.8" height="176.33">
-    <div>
-        <div id="Games" class="container" style="background-image: url(project_source/card-dnd-bg.webp);">
-            <img src="project_source/dnd-logo.webp" width="198" height="72" style="position: relative; top:250px; left: 25px;">
-        </div>
-        <div id="Games" class="container" style="background-image: url('project_source/4IuGySxB5B_733x540.webp');">
-            <img src="project_source/MX_Nav_EN.webp" width="198" height="80" style="position: relative; top:250px; left: 25px;">
-        </div>
-        <div id="Games" class="container" style="background-image: url('project_source/card-spellslinger.webp');">
-            <img src="project_source/spellslingers-logo.webp" width="198" height="62" style="position: relative; top:250px; left: 25px;">
-        </div>
-        <div id="Games" class="container" style="background-image: url('project_source/card-mtg-bg.webp');">
-            <img src="project_source/arena-logo-medium.webp" width="198" height="67" style="position: relative; top:250px; left: 25px;">
-        </div>
-        <div id="Games" class="container" style="background-image: url('project_source/card-black-lotus.webp');">
-            <img src="project_source/mtgo-logo-card.webp" width="198" height="67" style="position: relative; top:250px; left: 25px;">
-        </div>
-        <div id="Games" class="container" style="background-image: url('project_source/card-dark-alliance-bg.webp');">
-            <img src="project_source/DandD-logo.webp" width="198" height="105" style="position: relative; top:220px; left: 25px;">
-        </div>
-    </div>
-    <div class="content3">
-        <div>
-            <img id="arrow2" src="project_source/왼쪽화살표.png" width="60" height="56.84">
-        </div>
-        <div>
-            <img id="arrow2" src="project_source/오른쪽화살표.png" width="60" height="56.84">
+                <div class="control12">
+                    <label for="slide11" class="prev2"></label>
+                    <label for="slide13" class="next2"></label>
+                </div>
+                <div class="control13">
+                    <label for="slide12" class="prev2"></label>
+                    <label for="slide14" class="next2"></label>
+                </div>
+                <div class="control14">
+                    <label for="slide13" class="prev2"></label>
+                    <label for="slide15" class="next2"></label>
+                </div>
+                <div class="control15">
+                    <label for="slide14" class="prev2"></label>
+                    <label for="slide16" class="next2"></label>
+                </div>
+                <div class="control16">
+                    <label for="slide15" class="prev2"></label>
+                    <label for="slide11" class="next2"></label>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="ourCompany-form">
+<div id="ourCompany-form" class="clip-path3">
     <div class="ourCompany-contents">
         <div class="ourCompany-intro inline-block">
             <div class="line"></div>
@@ -244,7 +277,7 @@
                 <img src="project_source/wotc-logo (2).png" width="240" height="127.31"> 
             </div>
             <br><br>
-            <div >
+            <div>
                 <img src="project_source/1번.jpg" width="207" height="144">
                 <a href="https://www.archetype-entertainment.com/">
                     <img src="project_source/2번.jpg" width="207" height="144">
@@ -266,10 +299,7 @@
     </div>
 </div>
 
-<div class="triangle1"></div>
-<div class="triangle2"></div>
-<div class="triangle3"></div>
-<div id="joinUs-form">
+<div id="joinUs-form" class="clip-path4">
     <div class="joinUs-content">
         <div class="joinUs-text">
             <p>
@@ -278,17 +308,20 @@
                 <b>Join Us</b>
             </p>
             <a href="https://company.wizards.com/en/careers" target="_blank">
-                <div id="box2" style="text-align: center; font-size: 18px; color: white;">
+                <div class="button2 bottom-right inline-block" style="font-size: 18px; text-align: center;">
                     <b>FIND A JOB</b>
                 </div>
             </a>
         </div>
         
         
-        <img src="project_source/w-flat.png" width="540" height="489" style="z-index: 3; position:relative; top:-400px; display: inline-block; z-index: 3;">
     </div>
     <img src="project_source/en-careers-1439.png" width="856.34" height="186.05" style="position:relative; display: inline-block; left: 1044px; top: -75px;">
 </div>
+
+<img src="project_source/w-flat.png" width="540" height="489" style="clip-path: polygon(0 0, 100% 0, 100% 95%, 0 91%); position:absolute; top:2160px; left:310px; z-index: 5;">
+
+
 <div id="news-form">
     <div class="news-form-content">
         <header style="margin: 0 0 16px">
