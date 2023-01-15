@@ -9,7 +9,7 @@
     width: 246.88px;
     height: 363.45px;
     position: relative;
-    margin: 0 10px;
+    padding: 0 10px;
 
 }
 #ourGames-form-thumb{
@@ -33,23 +33,11 @@
     font-size: 18px;
     color: #ffffff;
 }
-.ourGames-form-switch{
-    width: 1216px;
-    height: 56.844px;
-    margin: 30px 0px 0px;
-    position: relative;
-}
-.ourGames-form-switch-button{
-    width: 60px; 
-    line-height: 56.84px;
-    text-align: center;
-    float: right;
-}
 
 * {margin:0;padding:0;box-sizing:content-box;}
         ul, li {list-style:none;}
 
-        .slidebox2 {max-width:1920px; margin:0; position:absolute; left:230px;}
+        .slidebox2 {max-width:1920px; margin:0; position:absolute; left:80px;}
         .slidebox2 .slidelist2 {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
         .slidebox2 .slidelist2 .slideitem2 {position:relative;display:inline-block;vertical-align:middle;background-color: rgba(255, 255, 255, 0);width:300px;transition:all 1s;}
         .slidebox2 .slidelist2 .slideitem2 > a {display:block;width:auto;position:relative;}
