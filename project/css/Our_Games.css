@@ -10,14 +10,23 @@
     height: 363.45px;
     position: relative;
     padding: 0 10px;
-
-}
-#ourGames-form-thumb{
-    width: 246.88px;
-    height: 363.45px;
     background-position: center;
     background-size: cover;
+
 }
+.ourGames-form-contain-block2{
+    width: 345.625px;
+    height: 398.219px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: -35px;
+    display: none;
+    filter: drop-shadow(10px 10px 100px #000);
+}
+.slideitem2:hover .ourGames-form-contain-block2 {
+    display: block;
+  }
 #ourGames-form-logo{
     width: 198px;
     position: absolute;

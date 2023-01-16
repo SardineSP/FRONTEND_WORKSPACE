@@ -26,6 +26,9 @@
     background-color: #290D4A;
     position: relative;
 }
+.news-form-contain-block:hover{
+    box-shadow: 5px 5px 10px 5px black;;
+}
 #news-form-thumb{
     width: 301px;
     height: 334px;
