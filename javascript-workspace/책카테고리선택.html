@@ -4,55 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>책 카테고리 선택</title>
 </head>
 <body>
     <fieldset>
         <legend>취미</legend>
-        <input type="checkbox" name="hobby" value="종합" id="selectAll">
-        <label for="selectAll">전체선택</label>
-    
-        <input type="checkbox" name="hobby" value="소설" id="everyThing">
-        <label for="everyThing">종합</label>
-    
-        <input type="checkbox" name="hobby" value="novel" id="novel">
-        <label for="novel">소설</label>
-    
-        <input type="checkbox" name="hobby" value="poem" id="poem">
-        <label for="poem">시/에세이</label>
-    
-        <input type="checkbox" name="hobby" value="economy" id="economy">
-        <label for="economy">경제/경영</label>
-    
-        <input type="checkbox" name="hobby" value="self" id="self">
-        <label for="self">자기계발</label>
-    
-        <input type="checkbox" name="hobby" value="child" id="child">
-        <label for="child">아동</label>
-        
-        <br>
+        <table>
+            <tr>
+                <td><input type="checkbox" onclick="selectAll();" value = "" id="selectAll">
+                    <label for="selectAll">전체선택</label></td>
 
-        <input type="checkbox" name="hobby" value="travel" id="travel">
-        <label for="travel">여행</label>
+                <td><input type="checkbox" name="hobby" value="종합" id="category1">
+                    <label for="category1">종합</label></td>
+                <td><input type="checkbox" name="hobby" value="소설" id="category2">
+                    <label for="category2">소설</label></td>
+                <td><input type="checkbox" name="hobby" value="시/에세이" id="category3">
+                    <label for="category3">시/에세이</label></td>
+                <td><input type="checkbox" name="hobby" value="경제/경영" id="category4">
+                    <label for="category4">경제/경영</label></td>
+                <td><input type="checkbox" name="hobby" value="자기계발" id="category5">
+                    <label for="category5">자기계발</label></td>
+                <td><input type="checkbox" name="hobby" value="아동" id="category6">
+                    <label for="category6">아동</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="hobby" value="여행" id="category7">
+                    <label for="category7">여행</label></td>
+                <td><input type="checkbox" name="hobby" value="과학" id="category8">
+                    <label for="category8">과학</label></td>
+                <td><input type="checkbox" name="hobby" value="역사/문화" id="category9">
+                    <label for="category9">역사/문화</label></td>
+                <td><input type="checkbox" name="hobby" value="외국어" id="category10">
+                    <label for="category10">외국어</label></td>
+                <td><input type="checkbox" name="hobby" value="컴퓨터" id="category11">
+                    <label for="category11">컴퓨터</label></td>
+                <td><input type="checkbox" name="hobby" value="만화" id="category12">
+                    <label for="category12">만화</label></td>
+            </tr>
+        </table>
+        
     
-        <input type="checkbox" name="hobby" value="science" id="science">
-        <label for="science">과학</label>
-    
-        <input type="checkbox" name="hobby" value="history" id="history">
-        <label for="history">역사/문화</label>
-    
-        <input type="checkbox" name="hobby" value="foreign" id="foreign">
-        <label for="foreign">외국어</label>
-    
-        <input type="checkbox" name="hobby" value="computer" id="computer">
-        <label for="computer">컴퓨터</label>
-    
-        <input type="checkbox" name="hobby" value="comic" id="comic">
-        <label for="comic">만화</label>
+        
     </fieldset>
-    <fieldset>
-        <output type=""></output>
-    </fieldset>
+
+    <br><br>
+
+    <button onclick="printCategory()">카테고리 선택</button><br>
+    <div id="area" style="border:1px solid red; width:100%; height:300px;"></div>
+    
+    <script>
+        //3번 기능
+        let categories = document.getElementsByName("hobby");
+        
+        for(let i = 0; i<categories.length; i++){
+            categories[i].onclick = function(){
+                //alert(i+"번째 체크박스 클릭됨"); -> 잘 연동되었는지 확인
+                
+                let checkedListLength = document.querySelectorAll("input[name=hobby]:checked").length;
+                // 선택된 체크박스 길이 == 전체 체크박스 길이
+                if(checkedListLength == categories.length){
+                    document.getElementById("selectAll").checked = true;
+                }else{
+                    document.getElementById("selectAll").checked = false;
+                }
+            
+
+            }
+        }
+
+        //1번 기능
+        function printCategory(){
+            // 내가 선택한 체크박스의 value값들을 div태그중 아이디값이 area인 요소의
+            // 안쪽(innerHTML)에 출력
+            let checkedList = document.querySelectorAll("input[type=checkbox]:checked");
+            
+            let area = document.getElementById("area");
+            console.log(checkedList);
+
+            checkedList.forEach(function(item,index,array){
+                area.innerHTML += item.value + " ";
+            })
+
+            //for(let i = 0; i<checkedList.length; i++){
+            //    area.innerHTML += checkedList[i].value + " ";
+            //}
+        }
+
+        //2번 기능
+        function selectAll(){
+            let checked = document.getElementById("selectAll").checked;
+
+            let categories = document.getElementsByName("hobby");
+
+            for(let i=0; i<categories.length; i++){
+                categories[i].checked = checked;
+            }
+        }
+    </script>
    
 
 
