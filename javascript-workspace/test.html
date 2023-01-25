@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    * 아이디 : <input type="text" id="id"><br><br>
+    * 비밀번호 : <input type="password" id="userPwd"><br><br>
+    * 비밀번호 확인 : <input type="password" id="checkPwd"><br><br>
+    * 이름 : <input type="text" id="name"><br><br>
+    * 이메일 : <input type="email" id="email"><br><br>
+    
+    * 취미 : <input type="text" placeholder="축구, 농구, 야구, 독서 등" id="hobby"><br><br>
+    * 거주지 : 
+    <select>
+        <option>
+            서울
+        </option>
+    </select>
+    
+    <br><br>
+
+
+    <button onclick="join(); join2();">회원가입</button>
+    <button onclick="cansel();">취소</button>
+
+    <script>
+        // 아이디 : 첫글자는 반드시 영문으로, 그리고 영문자, 숫자를 포함하여 총 4~12자로 입력
+        // 비밀번호 : 영문자, 숫자, 특수문자 !@#$%^로 총 8-15자
+        // 이름 : 한글로만 이루어져야하며 2글자 이상으로
+        // 이메일 : 이메일 형식에 맞춰서 입력
+        
+        function join(){
+            let value = document.getElementById("id").value;
+
+            let regExp = /^\w[a-zA-Z]\w[a-zA-Z0-9]{3,11}$/;
+
+
+            /*
+                * 추가적인 메타문자
+                \d : 숫자(즉, [0-9]와 동일)
+                \D : 숫자를 제외한 모든 문자
+                \w : 영문자, 숫자, _
+                \W : 영문자, 숫자, _를 제외한 모든문자
+                \s : 공백문자(띄워쓰기, 탭, 줄바꿈)
+                \S : 공백문자를 제외한 모든문자
+                
+                * 수량문자
+                + : 1글자 이상(적어도 1글자는 반드시 있어야함)
+                * : 0글자 이상(0글자도 가능하다는 뜻)
+                ? : 0글자 또는 1글자(2글자 이상은 불가능)
+
+                {5} : 정확히 5글자
+                {2,5} : 2글자 이상 5글자 이하
+                {2,} : 2글자 이상
+                {,5} : 5글자 이하
+            */
+
+      
+
+          if(regExp.test(value)){
+            alert("정상적으로 입력");
+          }else{
+            alert("잘못입력하셨습니다.");
+          }
+        }
+    </script>
+</body>
+</html>
