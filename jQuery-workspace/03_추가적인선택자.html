@@ -122,10 +122,16 @@
 
             // 초기화버튼 : 배경색은 파란색, 글자색은 흰색, 테두리없애기
             $(":reset").css("background","blue").css("color", "white").css("border", "none");
+            // $(":reset").css({
+            //     background : "blue",
+            //     color      : "white",
+            //     border     : "none"
+            // });
 
             // 제출버튼   : 클릭시 alert창으로 ㅋㅋ 메시지가 출력되도록
             $(":submit").click(function(){
-                alert("ㅋㅋㅋ");
+                //alert("ㅋㅋㅋ");
+
                 // 비밀번호 입력란 안에있는 값(value)을 출력해서 알람으로 띄우기
                 alert($(":password").val());
                 //.val() 함수의 경우 매개변수 없이 호출하면 값을 불러오는 역할(getter)
