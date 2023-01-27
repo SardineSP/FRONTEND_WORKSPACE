@@ -8,8 +8,9 @@
 
     <style>
         #inner{
-            background-color: gray;
-            border: none;
+            background-color: lightgray;
+            padding: 15px;
+            display: none;
         }
 
     </style>
@@ -18,17 +19,18 @@
 
 <body>
     <fieldset>
+        <!-- 풀이에서는 div로 풀이함! fieldset은 테두리가 있음... -->
         <legend>검색할 항목을 선택하세요</legend>
         <form>
-            <input type="radio" value="제목">
-            <input type="radio" value="날짜">
-            <input type="radio" value="작성자">
+            <input type="radio" name="category" id="title">제목
+            <input type="radio" name="category" id="date">날짜
+            <input type="radio" name="category" id="writer">작성자
         </form>
     </fieldset>
 
 
 
-    <fieldset id="inner">
+    <fieldset id="inner" name="option">
         <form>
             <legend>검색할 제목을 입력하세요 : </legend>
             <input type="search"> <button type="submit">검색</button>
@@ -38,7 +40,7 @@
 
 
 
-    <fieldset id="inner">
+    <fieldset id="inner" name="option">
         <form>
             <legend>검색할 날짜를 선택하세요 : </legend>
             <input type="date"> - <input type="date"> <button type="submit">검색</button>
@@ -47,13 +49,35 @@
 
 
 
-    <fieldset id="inner">
+    <fieldset id="inner" name="option">
         <form>
             <legend>검색할 작성자 아이디를 입력하세요 : </legend>
             <input type="search"> <button type="submit">검색</button>
         </form>
     </fieldset>
 
+    <script>
+        let categories = document.getElementsByName('category'); // [radio, radio, radio]
+        let names = document.getElementsByName('option');
+
+        categories.forEach(function(item,index){
+            item.addEventListener('change',function(){
+
+                for(let e of names){
+                    e.style.display = "none";
+                }
+
+                if(this.id == 'title'){
+                    names[0].style.display = "block";
+                }else if(this.id=='date'){
+                    names[1].style.display = "block";
+                }else{
+                    names[2].style.display = "block";
+                }
+            });
+        });
+
+    </script>
     
 
     

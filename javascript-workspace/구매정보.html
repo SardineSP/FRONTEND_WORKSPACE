@@ -9,26 +9,44 @@
 </head>
 
 <body>
-    <fieldset>
-        <legend>구매 정보</legend>
-        <form>
+    <form>
+        <fieldset>
+            <legend>구매 정보</legend>
             <ul>
                 <li>구매자 : <input type="text" placeholder="구매자의 이름을 입력하세요"></li>
                 <li>상품명 : <input type="text" placeholder="구매 상품 명을 입력하세요"></li>
                 <li>가격 : <input type="text" placeholder="구매 가격을 입력하세요"></li>
                 <li>구매 수량 : <input type="number" min="10" max="100" placeholder="최소 10" ></li>
                 <li>납품 등급 : <input type="range"></li>
-                <li>기타 사항 : <textarea></textarea></li>
+                <li>기타 사항 : <textarea id="etc"></textarea></li>
             </ul>
-        </form>
-    </fieldset>
+        </fieldset>
+    </form>
 
     <br>
 
-    <input type="button" value="입력값 출력하기">
+    <input type="button" value="입력값 출력하기" onclick="test();">
 
     <br>
 
+    <div id="div" style="border:black solid 1px; width: 300px; height: 150px;"></div>
+
+    <script>
+        function test(){
+            let inputs = document.getElementsByTagName("input");
+    
+            let div = document.getElementById("div");
+    
+            div.innerHTML+= "구매자 명 : " + inputs[0].value + "님 <br>"
+                         + "상품 명 : " + inputs[1].value + "<br>"
+                         + "가격 : " + inputs[2].value + "만원<br>"
+                         + "구매 수량 : " + inputs[3].value + "개<br>"
+                         + "납품등급 : " + inputs[4].value + "등급<br>"
+                         + "기타사항 : " + document.getElementById("etc").value;
+                         
+        }
+    </script>
+                        
 
     
 </body>
