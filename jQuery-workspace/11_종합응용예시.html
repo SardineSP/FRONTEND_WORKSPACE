@@ -69,76 +69,68 @@
     <label for="" id="l4">조회수</label> /
     <label for="" id="l5">작성일</label>
 
-    <!-- 여기서부터 다시 확인해보기... -->
-
-    <form>
-        <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
-        </div>
-    
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
-      </form>
-
     <script>
         $(function(){
             $("tbody>tr").click(function(){
                 //tbody의 tr들 중에 클릭이벤트가 발생할 경우
-
+                
                 //console.log($(this).children().eq(0).text()); // <td>글번호</td>
                 // 현재 선택된 요소의 자식들 중 0번째 요소(글번호)를 가져오는 구문
-
+                
                 // 현재 클릭이벤트가 발생한 해당 tr요소의 자손들에 순차적으로 접근하여
                 // 콘솔에 출력
                 $(this).children().each(function(index, el){
                     // index : 순차적으로 접근할때마다의 인덱스 수
                     // el : 순차적으로 접근되는 요소객체(td)
                     console.log($(el).text());
-                    $("#1"+(index+1)).text($(el).text());
+                    $("#l"+(index+1)).text($(el).text());
                 });
             });
         })
     </script>
 
+
+<br><br>
+<hr>
+
+<!-- 버튼 관련 클래스 -->
+<button class="btn btn-primary">로그인</button>
+<button class="btn btn-secondary">로그인</button>
+<button class="btn btn-warning">로그인</button>
+<button class="btn btn-primary btn-sm">로그인</button>
+<button class="btn btn-outline-warning btn-sm">로그인</button>
+
+<!-- 다른 태그들도 버튼모양으로 적용할 수 있다. -->
+<button class="btn btn-outline-warning">dd</button>
+<a class="btn btn-outline-warning">a태그</a>
+
+<br><br>
+<hr>
+
+<form>
+    <img class="mb-4" src="../html-workspace/resources/image/kh_logo.jpg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">ID</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
+  </form>
+
     <br><br>
-
     <hr>
-
-    <!-- 버튼 관련 클래스 -->
-    <button class="btn btn-primary">로그인</button>
-    <button class="btn btn-secondary">로그인</button>
-    <button class="btn btn-warning">로그인</button>
-    <button class="btn btn-primary btn-sm">로그인</button>
-    <button class="btn btn-outline-warning btn-sm">로그인</button>
-
-    <!-- 다른 태그들도 버튼모양으로 적용할 수 있다. -->
-    <button class="btn btn-outline-warning">dd</button>
-    <a class="btn btn-outline-warning">a태그</a>
-
-
-
-
-    
-    <br>
-    <br>
-    이부분 좀 고치기
-    <br><br><br><br><br>
-
-
-
 
     <!-- 모달 : 부트스트랩에서 제공하는 팝업창 . div 요소를 띄워준다 
         data-toggle : 모달창 띄우기 위해서 반드시 필요한 속성(부트스트랩에서 제공)
