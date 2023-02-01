@@ -7,29 +7,88 @@
     <title>smtown</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <style>
+
+        body{
+            background-color: pink;
+        }
+        .main{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
         header{
-            height: 1920px;
+            width: 1920px;
+            height: 0px;
+            position: fixed;
+            z-index: 10;
         }
         .headerBox{
             width: 1860px;
             height: 0px;
             padding: 0px 30px;
+            position: relative;
         }
 
+        .navBtn {
+            position: absolute;
+            left: 30px;
+            top: 29px;
+            font-size: 0;
+            background: url(resource/btn_menu.svg) no-repeat left / 100%;
+            width: 22px;
+            height: 26px;
+        }
+
+        .mainLogo {
+            display: flex;
+            position: relative;
+            top: 29px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logIn {
+            position: absolute;
+            right: 30px;
+            top: 29px;
+            font-size: 0;
+            background: url(resource/btn_mypage.svg) no-repeat 0 / 23px;
+            width: 23px;
+            height: 23px;
+        }
+        
+        .thumb{
+            border-radius: 4px;
+            height: 26px;
+            margin-right: 13px;
+        }
+
+
+
+
+
         .action{
-            width: 1920px;
-            height: 736px;
+            visibility: visible;
+            height: 100%;
+            transition: all .4s ease-in-out;
+            transform: translateY(0);
             padding: 94px 0px 50px;
+            background: rgba( 255, 255, 255, 0.98 );
         }
 
         .navHeader{
-            width: 1920px;
+            width: 100%;
             height: 44px;
+            background: #191919;
+            position: absolute;
+            top: 0;
+            visibility: visible;
         }
 
         .in-navHeader{
@@ -38,50 +97,244 @@
             padding: 0px 30px;
             margin: 0px 290px;
         }
-        footer{
+
+        header nav ul {
+            max-width: 1340px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        nav>ul>li{
+            float: left;
+            width: 320px;
+        }
+        li>dd{
+            width: 320px;
+        }
+
+        nav ul #mainMenu{
+            width: 1280px; 
+            height: 272px; 
+            padding: 0px 30px; 
+            margin: 0px 290px;
+        }
+
+        nav ul #sideMenu{
+            width: 1280px;
+            height: 434px;
+            padding: 0px 30px;
+            margin: 58px 290px 0px;
+        }
+
+        header nav ul li.sns {
+            clear: both;
+            display: block;
+            border-top: 1px solid #dcdcdc;
+            width: 100%;
+            padding-top: 60px;
+            margin-top: 24px;
+        }
+
+
+
+
+        .sns{
+            position: absolute;
+            bottom: 92px;
+            text-align: center;
+            width: 100%;
+            height: 57px;
+            z-index: 5;
+        }
+
+        ul>li>a>img{
+            width: 46px;
+            height: 46px;
+            margin: 0px 10px;
+        }
+
+        .sns li{
+            width: 66px;
+            height: 46px;
+        }
+
+        .sns ul{
             width: 1920px;
-            height: 14px;
+            height: 57px;
             display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 5px;
+            right: 36px;
+        }
+
+
+        footer{
+            width: 100%;
+            z-index: 10;
+            bottom: 30px;
+            height: 14px;
+            position: absolute;
+
         }
         .footer-left{
             width: 344px;
             height: 14px;
-            margin-left: 30px;
             font-size: 11px;
+            margin: 0px 0px 0px 30px;
             padding-left: 0px;
             font-family: 'NanumBarunGothic';
+            color: white;
+            float: left;
+            box-sizing: border-box;
         }
         .footer-right{
             width: 308.188px;
             height: 14px;
-            margin: 0px 30px;
             font-size: 11px;
+            margin: 0px 30px 0px 0px; 
+            padding-left: 0px;
             font-family: 'Noto Sans KR', sans-serif;
+            color: white;
+            float: right;
+            box-sizing: border-box;
+            line-height: 1;
 
         }
+
         ul{
             list-style: none;
         }
+
         .footer-left>li{
             float: left;
             margin-right: 20px;
         }
+        .footer-right>li{
+            float: right;
+        }
+        
+
         a{
             text-decoration-line: none;
+            cursor: pointer;
         }
 
-        body {height: 300vh; background: #222;}
-        .swiper-container {margin-top: 80vh; height: 600px;}
-        .slide01 {width: 1920px; height: 937px;}
-        .slide02 {width: 1920px; height: 937px;}
-        .slide03 {width: 1920px; height: 937px;}
-        .slide04 {width: 1920px; height: 937px;}
-        .slide05 {width: 1920px; height: 937px;}
-        .slide06 {width: 1920px; height: 937px;}
-        .slide07 {width: 1920px; height: 937px;}
-        .slide08 {width: 1920px; height: 937px;}
-        .slide09 {width: 1920px; height: 937px;}
-        .slide10 {width: 1920px; height: 937px;}
+        a:link { 
+            color:white; 
+        }
+
+        a:visited { 
+            color:white; 
+        }
+
+        video{
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+
+        select::-ms-expand { 
+            display: none;
+        }
+
+        select {
+            -o-appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .select {
+            height: 15px;
+            outline: 0 none;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 11px;
+            color: white;
+            border: none;
+            position: relative;
+            top: -3px;
+            cursor: pointer;
+        }
+
+        .s1{
+            width: 50px;
+            margin-right: 25px;
+            background:url('resource/화살표.png') no-repeat right 2px center;
+            background-size: 10px;
+        }
+
+        .s2{
+            
+            width: 80px;
+            margin-right: 25px;
+            background:url('resource/화살표.png') no-repeat right 2px center;
+            background-size: 10px;
+        }
+        .select option {
+            background: white;
+            color: black;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .select option:hover {
+            background: #ffffff
+        }
+        
+
+
+
+        html,
+        body {
+        position: relative;
+        height: 100%;
+        }
+
+        body {
+        background: #000;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        }
+
+        .swiper {
+        width: 100%;
+        height: 100%;
+        }
+
+        .swiper-slide {
+        text-align: center;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        }
+
+        .swiper-slide video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .swiper-pagination-bullet{
+            width: 2px;
+            height: 60px;
+            border-radius: 0;
+            color: #ffffff;
+            background-color: #ffffff;
+        }
+  
     
 
         @font-face {
@@ -121,129 +374,414 @@
 
 
 </head>
+
 <body>
-    <div class="main">
+    <div class="swiper mySwiper swiper-initialized swiper-vertical swiper-pointer-events swiper-backface-hidden">
         <header>
-            <div class="headerBox"></div>
-            <!-- <div class="action">
-                <div class="navHeader">
-                    <div class="in-navHeader">
-                    </div>
-                </div>
+            <!-- <div class="headerBox">
+                <a href="메뉴열기" class="navBtn">navBtn</a>
+                <a href="https://www.smtown.com/" class="mainLogo">
+                    <img src="resource/logo_smtown.svg" style="width: 181px; height: 26px;">
+                </a>
+                <a href="연결 필요>" class="logIn">logIn</a>
             </div> -->
-        </header>
-        <div class="section_1">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide01">
-                        <video src="resource/main_video1.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide02">
-                        <video src="resource/main_video2.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide03">
-                        <video src="resource/main_video3.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide04">
-                        <video src="resource/main_video4.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide05">
-                        <video src="resource/main_video5.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide06">
-                        <video src="resource/main_video6.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide07">
-                        <video src="resource/main_video7.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide08">
-                        <video src="resource/main_video8.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide09">
-                        <video src="resource/main_video9.mp4" autoplay muted></video>
-                    </div>
-                    <div class="swiper-slide slide10">
-                        <video src="resource/main_video10.mp4" autoplay muted></video>
+            <nav class="action">
+                <div class="navHeader">
+                    <div style="width: 1280px; height: 17px; padding: 0px 30px; margin: 0px 290px;">
+                        <a href="" class="btnClose">
+                            <img src="resource/btn_gnb_close.svg" style="width:18px; height: 18px;">
+                        </a>
+                        <span><img src="resource/gnb_smtown.svg" style="margin: 0px 34px; width:95px;height:13px"></span>
                     </div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <ul id="mainMenu">
+                    <li>
+                        <h3><a href="/artist/musician">ARTIST</a></h3>
+                        <dl>
+                            <dd><a href="/artist/musician">MUSICIAN</a></dd>
+                            <dd><a href="/artist/actor">ACTOR</a></dd>
+                            <dd><a href="/artist/entertainer">ENTERTAINER</a></dd>
+                            <dd><a href="/artist/model">MODEL</a></dd>
+                            <dd><a href="/artist/athlete">ATHLETE</a></dd>
+                        </dl>
+                    </li>
+        
+                    <li>
+                        <h3><a href="/production/album">PRODUCTION</a></h3>
+                        <dl>
+                            <dd><a href="/production/album">ALBUM</a></dd>
+                            <dd><a href="/production/music-video">MUSIC VIDEO</a></dd>
+                            <dd><a href="/production/sm-station">SM STATION</a></dd>
+                            <dd><a href="/production/sm-classics">SM CLASSICS</a></dd>
+                            <dd><a href="/production/i-screa-m">iScreaM</a></dd>
+                            <dd><a href="/production/remastering">REMASTERING</a></dd>
+                            <dd><a href="/production/movie-drama">MOVIE·DRAMA</a></dd>
+                            <dd><a href="/production/variety-show">VARIETY SHOW</a></dd>
+                        </dl>
+                    </li>
+        
+                    <li>
+                        <h3><a href="/series">SERIES</a></h3>
+                        <dl>
+                            <dd><a href="/series">SERIES</a></dd>
+                        </dl>
+                    </li>
+        
+                    <li class="list_relation">
+                        <h3>INVESTOR RELATIONS</h3>
+                        <dl>
+                            <dd><a href="https://www.smentertainment.com/Overview/Introduction" target="_blank">INTRODUCTION</a></dd>
+                            <dd><a href="https://www.smentertainment.com/Overview/EsgReport" target="_blank">ESG REPORT</a></dd>
+                            <dd><a href="https://www.smentertainment.com/Investors/OperateInfo?info=stockholder" target="_blank">CORPORATE GOVERNANCE</a></dd>
+                            <dd><a href="https://www.smentertainment.com/Investors/Regulation" target="_blank">REGULATION</a></dd>
+                            <dd><a href="https://www.smentertainment.com/Investors/IrLibrary" target="_blank">IR MATERIAL</a></dd>
+                            <dd><a href="https://www.smentertainment.com/Investors/Notice" target="_blank">NOTICE</a></dd>
+                        </dl>
+                    </li>
+        
+                    <li class="list_audition">
+                        <h3>AUDITION</h3>
+                        <dl>
+                            <dd><a href="https://audition.smtown.com" target="_blank">AUDITION</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <ul id="sideMenu">
+                    <li class="community">
+                        <h3>COMMUNITY</h3>
+                        <dl>
+                            <dd>
+                                        <a href="http://help.kwangyaclub.com/" target="_blank">
+                                            <span><img src="resource/광야클럽.svg" class="thumb"></span>
+                                            KWANGYA CLUB
+                                        </a>
+                            </dd>
+                            <dd>    
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="shopping">
+                        <h3>SHOPPING</h3>
+                        <dl>
+                            <dd>
+                                        <a href="https://www.smtownandstore.com/" target="_blank">
+                                            <span><img src="resource/타운&스토어.svg"  class="thumb"></span>
+                                                SMTOWN &amp;STORE
+                                        </a>
+                                        <a href="https://smglobalshop.com/" target="_blank"  class="thumb">
+                                            <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/18b6755267c34f5bb2ec4a4253c31ef4_2022-02-18-15-11-34.svg');"></span>
+                                                SM Global Shop
+                                        </a>  
+                            </dd>
+                            <dd>
+                                        <a href="https://smartstore.naver.com/celebrand" target="_blank" class="navIcon" rel="nosublink">
+                                            <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/abafaafe03c947abb975c4869387ebed_2022-02-18-15-12-18.svg');"></span>
+                                                CELEBRAND
+                                        </a>
+                                        <a href="https://global.smtowntravel.com/" target="_blank" class="navIcon" rel="nosublink">
+                                            <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/00ed2c759eef4b5b86e08258aa8a5b73_2022-02-18-15-11-20.svg');"></span>
+                                                SM GLOBAL PACKAGE
+                                        </a> 
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="service">
+                        <h3>SERVICE</h3>
+                        <dl>
+                            <dd>
+                                    <a href="https://smtownandstore.com/product/MUSIC-NATION-SMTOWN-META-PASSPORT.html" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/204d39ff1190455d82b997ab6ddb9a73_2022-10-14-02-17-03.svg');"></span>
+                                            META-PASSPORT
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.sm.smtownar" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/73d491c534a4469cba21f658601e31c2_2022-02-18-15-04-40.svg');"></span>
+                                            SMTOWN AR
+                                    </a>
+                                    <a href="https://www.everysing.com/" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/5c4d6c7b56e94ba6844a607b1792fe53_2022-02-18-15-10-37.svg');"></span>
+                                            everysing
+                                    </a>
+                                    <a href="https://twitter.com/SuperStarSM_twt" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/0ec84f77719b4679b151da1c0f37ef57_2022-02-18-16-34-12.svg');"></span>
+                                            SuperStar SMTOWN
+                                    </a>
+                            </dd>
+                            <dd>
+                                    <a href="https://www.beyondlive.com/" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/98bff492a4454c5ba2712c96c546d146_2022-02-18-15-11-07.svg');"></span>
+                                            Beyond LIVE
+                                    </a>
+                                    <a href="https://www.fanbook.me/" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/c8c717d262f64f158690c22ff3cdb99c_2022-02-18-05-58-31.svg');"></span>
+                                            Fanbook
+                                    </a>
+                                    <a href="https://www.music-flo.com/" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/e7446471033140a593153f843e6c4fec_2022-02-18-16-34-02.svg');"></span>
+                                            FLO
+                                    </a>
+                                    <a href="http://smuniverse.com/" target="_blank" class="navIcon" rel="nosublink">
+                                        <span class="web" style="background-image:url('https://smtown-cdn.smtown.com/upload/smtown/menu-link/web/80098219392e4f2a878157e001fbe737_2022-04-12-05-31-45.svg');"></span>
+                                            SM Universe
+                                    </a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="sns">
+                        <h3>SNS</h3>
+                        <dl>
+                                <dd>
+                                    <strong>SMTOWN</strong>
+                                        <a href="https://www.facebook.com/smtown" target="_blank" class="snsIcon facebook" rel="nosublink">facebook</a>
+                                        <a href="https://twitter.com/SMTOWNGLOBAL" target="_blank" class="snsIcon twitter" rel="nosublink">twitter</a>
+                                        <a href="https://www.youtube.com/c/SMTOWN" target="_blank" class="snsIcon youtube" rel="nosublink">youtube</a>
+                                        <a href="https://www.instagram.com/smtown/" target="_blank" class="snsIcon instagram" rel="nosublink">instagram</a>
+                                        <a href="https://www.tiktok.com/@smtown_official" target="_blank" class="snsIcon tiktok" rel="nosublink">tiktok</a>
+                                        <a href="https://weibo.com/smtown" target="_blank" class="snsIcon weibo" rel="nosublink">weibo</a>
+                                </dd>
+                                <dd>
+                                    <strong>PinkBlood</strong>
+                                        <a href="https://www.instagram.com/pinkinmyblood/" target="_blank" class="snsIcon instagram" rel="nosublink">instagram</a>
+                                        <a href="https://www.tiktok.com/@pinkinmyblood" target="_blank" class="snsIcon tiktok" rel="nosublink">tiktok</a>
+                                </dd>
+                                <dd>
+                                    <strong>SMile</strong>
+                                        <a href="https://www.facebook.com/SMTOWN.SMile" target="_blank" class="snsIcon facebook" rel="nosublink">facebook</a>   
+                                </dd>
+                                <dd>
+                                    <strong>AUDITION</strong>
+                                        <a href="https://www.instagram.com/smaudition_official/" target="_blank" class="snsIcon instagram" rel="nosublink">instagram</a>  
+                                </dd>
+                                <dd>
+                                    <strong>SMROOKIES</strong>
+                                        <a href="https://www.facebook.com/SMROOKIES" target="_blank" class="snsIcon facebook" rel="nosublink">facebook</a>
+                                        <a href="https://www.twitter.com/smrookies" target="_blank" class="snsIcon twitter" rel="nosublink">twitter</a>
+                                        <a href="https://www.instagram.com/smrookies/" target="_blank" class="snsIcon instagram" rel="nosublink">instagram</a>  
+                                </dd>
+                            
+                        </dl>
+                    </li>
+                    
+                    
+                    </ul>
+
+            </ㅜv>
+        </header>
+      <!-- <div class="swiper-wrapper" id="swiper-wrapper-4e4cacfc1010c7b8e4" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video1.mp4" autoplay muted></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/nct127" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/NCTsmtown_127" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/NCT127.smtown" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@official_nct" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://NCT127.lnk.to/Ay-Yo" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
             </div>
+
         </div>
-    
-  
-        <footer>
-            <div>
-                <ul class="footer-left">
-                    <li><a href="https://www.smentertainment.com/">회사소개</a></li>
-                    <li><a href="https://recruit.smentertainment.com/">채용정보</a></li>
-                    <li><a href="https://www.smtown.com/notice">공지사항</a></li>
-                    <li><a href="https://www.smtown.com/policy/terms">이용약관</a></li>
-                    <li><a href="https://www.smtown.com/policy/privacy">개인정보처리방침</a></li>
-                </ul>
-                <ul class="footer-right">
-                    <li><select>
-                        <option>FAMILY SITE</option>
-                        <option value="https://www.smcultureandcontents.com/">SM C&C</option>
-                        <option value="https://www.smtowntravel.com/">에스엠타운트래블</option>
-                        <option value="https://www.tourexpress.com/">투어익스프레스</option>
-                        <option value="https://www.hoteltrees.com/">호텔트리스</option>
-                        <option value="https://global.smtowntravel.com/">SM GLOBAL PACKAGE</option>
-                        <option value="https://www.smtown.jp/">SM JAPAN</option>
-                        <option value="http://www.dreammakerlive.com/">Dream Maker</option>
-                        <option value="http://www.galaxiasme.com/">GalaxiaSM</option>
-                        <option value="https://esteemgroup.com/">Esteem</option>
-                        <option value="http://www.mystic89.net/">MYSTIC STORY</option>
-                        <option value="http://www.keyeast.co.kr/">KEYEAST</option>
-                        <option value="https://smglobalshop.com/">SM GLOBAL SHOP</option>
-                        <option value="https://www.smtownandstore.com/">SMTOWN &STORE</option>
-                        <option value="https://www.celebrand.co.kr/">CELEBRAND</option>
-                        <option value="http://www.dear-u.co/">DearU</option>
-                        <option value="http://www.smfoodlife.com/">비컨홀딩스</option>
-                    </select></li>
-                    <li><select>
-                        <option value="">Language</option>
-                        <option value="">한국어</option>
-                        <option value="">ENGLISH</option>
-                        <option value="">中文</option>
-                        <option value="">日本語</option>
-                    </select></li>
-                    <li>ⓒ SM ENTERTAINMENT</li>
+        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video2.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/superjunior/" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://www.twitter.com/sjofficial" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/superjunior" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://yesung.lnk.to/Sensory_Flows" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
                 </ul>
             </div>
-        </footer>
-    </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="3 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video3.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/girlsontop_sm" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/GirlsOnTop_SM" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/GirlsOnTop.SM" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@girlsontop_sm" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://gotthebeat.lnk.to/StampOnIt" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="4 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video4.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/screamrecords" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/NCTsmtown" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/ScreaMRecordsSM" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@official_nct" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://iscream.lnk.to/Vol20" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="5 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video5.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/smtown" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/SMTOWNGLOBAL" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/smtown" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@smtown_official" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://smtown.lnk.to/SMCU_PALACE" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="6 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video6.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/wayvofficial" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/wayv_official" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/WayV.official" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@official_wayv" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://www.weibo.com/WeiShenV" class="weblink" target="_blank"><img src="resource/btn_weibo.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="7 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video7.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/nct_dream" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/NCTsmtown_DREAM" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/NCTDREAM.smtown" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@official_nct" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://nctdream.lnk.to/Candy" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="8 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video8.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/superjunior/" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://www.twitter.com/sjofficial" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/superjunior" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://superjunior.lnk.to/Celebration" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="9 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video9.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/smtown" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/SMTOWNGLOBAL" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/smtown" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="http://smtown.lnk.to/SMCU_PALACE" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="swiper-slide" role="group" aria-label="10 / 10" style="height: 937px; margin-bottom: 30px;">
+            <video src="resource/main_video10.mp4" autoplay muted loop></video>
+
+            <div class="sns">
+                <ul>
+                    <li><a href="https://www.instagram.com/shinee" class="instaram" target="_blank"><img src="resource/btn_instagram.svg"></a></li>
+                    <li><a href="https://twitter.com/SHINee" class="twitter" target="_blank"><img src="resource/btn_twitter.svg"></a></li>
+                    <li><a href="시간 나면 추가해보자~" class="youtube"><img src="resource/btn_youtube.svg"></a></li>
+                    <li><a href="https://www.facebook.com/shinee" class="facebook" target="_blank"><img src="resource/btn_facebook.svg"></a></li>
+                    <li><a href="https://www.tiktok.com/@shinee_officialt" class="tiktok" target="_blank"><img src="resource/btn_tiktok.svg"></a></li>
+                    <li><a href="https://minho.lnk.to/_CHASE" class="weblink" target="_blank"><img src="resource/btn_link.svg"></a></li>
+                </ul>
+            </div>
+
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-vertical"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 9"></span></div>
+    
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> -->
+
+      <!-- <footer>
+          <ul class="footer-left">
+              <li><a href="https://www.smentertainment.com/">회사소개</a></li>
+              <li><a href="https://recruit.smentertainment.com/">채용정보</a></li>
+              <li><a href="https://www.smtown.com/notice">공지사항</a></li>
+              <li><a href="https://www.smtown.com/policy/terms">이용약관</a></li>
+              <li><a href="https://www.smtown.com/policy/privacy">개인정보처리방침</a></li>
+          </ul>
+          <ul class="footer-right">
+              <li>ⓒ SM ENTERTAINMENT</li>
+              <li><select class="select s1">
+                  <option value="">한국어</option>
+                  <option value="">ENGLISH</option>
+                  <option value="">中文</option>
+                  <option value="">日本語</option>
+              </select></li>
+              <li><select class="select s2">
+                  <option>FAMILY SITE</option>
+                  <option value="https://www.smcultureandcontents.com/">SM C&C</option>
+                  <option value="https://www.smtowntravel.com/">에스엠타운트래블</option>
+                  <option value="https://www.tourexpress.com/">투어익스프레스</option>
+                  <option value="https://www.hoteltrees.com/">호텔트리스</option>
+                  <option value="https://global.smtowntravel.com/">SM GLOBAL PACKAGE</option>
+                  <option value="https://www.smtown.jp/">SM JAPAN</option>
+                  <option value="http://www.dreammakerlive.com/">Dream Maker</option>
+                  <option value="http://www.galaxiasme.com/">GalaxiaSM</option>
+                  <option value="https://esteemgroup.com/">Esteem</option>
+                  <option value="http://www.mystic89.net/">MYSTIC STORY</option>
+                  <option value="http://www.keyeast.co.kr/">KEYEAST</option>
+                  <option value="https://smglobalshop.com/">SM GLOBAL SHOP</option>
+                  <option value="https://www.smtownandstore.com/">SMTOWN &STORE</option>
+                  <option value="https://www.celebrand.co.kr/">CELEBRAND</option>
+                  <option value="http://www.dear-u.co/">DearU</option>
+                  <option value="http://www.smfoodlife.com/">비컨홀딩스</option>
+              </select></li>
+              
+              
+          </ul>
+      </footer> -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            speed: 500,
-            direction: 'vertical',
-            mousewheel: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-            watchOverflow : true,
-            on: {
-                slideChange: function() {
-                    setTimeout(function () {
-                      swiper.params.touchReleaseOnEdges = false;  
-                      swiper.params.mousewheel.releaseOnEdges = false;
-                    });
-                },
-                reachEnd: function() {
-                    setTimeout(function () {
-                        swiper.params.touchReleaseOnEdges = true;
-                        swiper.params.mousewheel.releaseOnEdges = true;
-                    }, 500);
-                },
-                reachBeginning: function() {
-                    setTimeout(function () {
-                        swiper.params.touchReleaseOnEdges = true;
-                        swiper.params.mousewheel.releaseOnEdges = true;
-                    }, 500);
-                }
-            }
-        });
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        mousewheel: true,
+        speed: 500,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     </script>
-</body>
+  
+  
+  
+  </body>
+      
+
+      
+    
+
 </html>
