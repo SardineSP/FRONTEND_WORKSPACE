@@ -13,13 +13,9 @@
 
     <style>
 
-        body{
-            background-color: pink;
-        }
         .main{
             position: relative;
             width: 100%;
-            height: 100%;
         }
 
         #link-g{
@@ -29,13 +25,13 @@
         }
 
         header{
-            width: 1920px;
+            width: 100%;
             height: 0px;
             position: fixed;
             z-index: 10;
         }
         .headerBox{
-            width: 1860px;
+            width: 100%;
             height: 0px;
             padding: 0px 30px;
             position: relative;
@@ -43,7 +39,7 @@
 
         .navBtn {
             position: absolute;
-            left: 30px;
+            left: 2%;
             top: 29px;
             font-size: 0;
             background: url(resource/btn_menu.svg) no-repeat left / 100%;
@@ -51,17 +47,24 @@
             height: 26px;
         }
 
+        #slideDownBtn{
+            cursor: pointer;
+        }
+
+        #slideUpBtn{
+            cursor: pointer;
+        }
+
         .mainLogo {
-            display: flex;
-            position: relative;
+            display: block;
+            position: absolute;
             top: 29px;
-            justify-content: center;
-            align-items: center;
+            left: 46%;
         }
 
         .logIn {
             position: absolute;
-            right: 30px;
+            right: 5%;
             top: 29px;
             font-size: 0;
             background: url(resource/btn_mypage.svg) no-repeat 0 / 23px;
@@ -75,36 +78,17 @@
             margin-right: 10px;
         }
 
-
-        .service td{
-            width: 320px;
-            margin: 0px 0px 10px;
-            line-height: 25px;
-        }
-
-        .mainMenu{
-            width: 1280px;
-            height: 793px;
+        .mainMenu-table{
+            width: 80%;
             padding: 94px 30px 0px;
-            margin: 0px 290px 0px;
+            margin: 0px 290px;
             border-collapse : collapse;
             border-spacing : 0;
         }
 
-        
-        
-        .mainMenu3 tr td{
-            width: 26px;
-        }
-
-
         .action{
             visibility: visible;
-            height: 793px;
-            transition: all .4s ease-in-out;
-            transform: translateY(0);
-            padding: 94px 0px 50px;
-            background: rgba( 255, 255, 255, 0.98 );
+            width: 100%;
             display: none;
         }
 
@@ -117,17 +101,10 @@
             visibility: visible;
         }
 
-        .in-navHeader{
-            width: 1280px;
-            height: 17px;
-            padding: 0px 30px;
-            margin: 0px 290px;
+        nav{
+            background: rgba( 255, 255, 255, 0.98 );
+            float: left;
         }
-
-
-
-
-        
 
         .sns{
             position: absolute;
@@ -137,9 +114,6 @@
             height: 57px;
             z-index: 5;
         }
-
-        
-
 
         ul>li>a>img{
             width: 46px;
@@ -153,13 +127,12 @@
         }
 
         .sns ul{
-            width: 1920px;
+            width: 100%;
             height: 57px;
             display: flex;
             justify-content: center;
             position: relative;
             bottom: 5px;
-            right: 36px;
         }
 
 
@@ -193,7 +166,6 @@
             float: right;
             box-sizing: border-box;
             line-height: 1;
-
         }
 
         ul{
@@ -281,9 +253,6 @@
         .select option:hover {
             background: #ffffff
         }
-        
-
-
 
         html,
         body {
@@ -292,10 +261,11 @@
         }
 
         body {
-        background: green;
-        color: #000;
-        margin: 0;
-        padding: 0;
+
+            background: green;
+            color: #000;
+            margin: 0;
+            padding: 0;
         }
 
         .swiper {
@@ -366,6 +336,8 @@
         .nanumbarungothic * {
             font-family: 'NanumBarunGothic', sans-serif;
         }
+
+
         
         
     </style>
@@ -382,34 +354,39 @@
         <header>
             <div class="headerBox">
                 <div class="navBtn" id="slideDownBtn">navBtn</div>
-                <!-- <a href="https://www.smtown.com/" class="mainLogo" width="181px">
-                    <img src="resource/logo_smtown.svg" style="width: 181px; height: 26px;">
-                </a> -->
+                <div class="mainLogo">
+                    <a href="https://www.smtown.com/">
+                        <img src="resource/logo_smtown.svg" href="https://www.smtown.com/" width="181px" height="26px">
+                    </a>
+                </div>
                 <a href="연결 필요>" class="logIn">logIn</a>
             </div>
             <nav class="action">
                 <div class="navHeader">
-                    <div style="width: 1280px; height: 17px; padding: 13px 30px 14px; margin: 0px 290px;">
-                        <a href="">
-                            <img src="resource/btn_gnb_close.svg" width="19px" height="17px" id="slideUpBtn">
-                        </a>
+                    <div style="width: 69%; height: 10%; position: relative; top: 25%; margin: 0 auto;">
+                        <span><img src="resource/btn_gnb_close.svg" width="19px" height="17px" id="slideUpBtn"></span>
                         <span><img src="resource/gnb_smtown.svg" width="95px" height="13px"></span>
                     </div>
+                </div>
+                <div  width="100%" height="100%">
                     <ul>
                         <li>
-                            <table class="mainMenu">
+                            <table class="mainMenu-table">
+                                <tr>
+                                    <td colspan="4" height="50px"></td>
+                                </tr>
                                 <tr>
                                     <th>
-                                        <h3><a href="/artist/musician">ARTIST</a></h3>
+                                        <h1><a href="/artist/musician">ARTIST</a></h1>
                                     </th>
                                     <th>
-                                        <h3><a href="/production/album">PRODUCTION</a></h3>
+                                        <h1><a href="/production/album">PRODUCTION</a></h1>
                                     </th>
                                     <th>
-                                        <h3><a href="/series">SERIES</a></h3>
+                                        <h1><a href="/series">SERIES</a></h1>
                                     </th>
                                     <th>
-                                        <h3>INVESTOR RELATIONS</h3>
+                                        <h1>INVESTOR RELATIONS</h1>
                                     </th>
                                 </tr>
                                 <tr>
@@ -428,7 +405,7 @@
                                     <td><a href="/artist/entertainer">ENTERTAINER</a></td>
                                     <td><a href="/production/sm-station">SM STATION</a></td>
                                     <th rowspan="2">
-                                        <h3>AUDITION</h3>
+                                        <h1>AUDITION</h3>
                                     </th>
                                     <td><a href="https://www.smentertainment.com/Investors/OperateInfo?info=stockholder" target="_blank">CORPORATE GOVERNANCE<img src="resource/icon_link_g.svg" id="link-g"></a></td>
                                 </tr>
@@ -463,9 +440,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                   <th><h3>COMMUNITY</h3></th>
-                                   <th><h3>SHOPPING</h3></th>
-                                   <th colspan="2"><h3>SERVICE</h3></th>
+                                    <td colspan="4" height="50px"></td>
+                                </tr>
+                                <tr>
+                                   <th><h1>COMMUNITY</h1></th>
+                                   <th><h1>SHOPPING</h1></th>
+                                   <th colspan="2"><h1>SERVICE</h1></th>
                                 </tr>
                                 <tr>
                                     <td>
@@ -557,18 +537,24 @@
                                         </a>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="4" height="50px"></td>
+                                </tr>
                                 <tr style="border-top: 1px solid #dcdcdc;">
+                                    <td colspan="4" height="50px"></td>
+                                </tr>
+                                <tr>
                                     <th rowspan="4" width="304px" >
-                                        <h3>SNS</h3>
+                                        <h1 style="line-height: 10;">SNS</h1>
                                     </th>
                                     <th>
-                                        <strong>SMTOWN</strong>
+                                        <h4>SMTOWN</h4>
                                     </th>  
                                     <th>
-                                        <strong>PinkBlood</strong>
+                                        <h4>PinkBlood</h4>
                                     </th>
                                     <th>
-                                        <strong>SMile</strong>
+                                        <h4>SMile</h4>
                                     </th>
                                 </tr>
                                 <tr>
@@ -612,10 +598,10 @@
                                 </tr>
                                 <tr>
                                     <th>
-                                        <strong>AUDITION</strong>
+                                        <h4>AUDITION</h4>
                                     </th>
                                     <th>
-                                        <strong>SMROOKIES</strong>
+                                        <h4>SMROOKIES</h4>
                                     </th>
                                 </tr>
                                 <tr>
@@ -639,20 +625,20 @@
                                         </a>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="4" height="100px"></td>
+                                </tr>
                             
                             </table>
                         </li>
                     </ul>
                 </div>
-
-
-
             </nav>
         </header>
 
       <div class="swiper-wrapper" id="swiper-wrapper-4e4cacfc1010c7b8e4" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
-        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 10" style="height: 937px; margin-bottom: 30px;">
-            <video src="resource/main_video1.mp4" autoplay muted></video>
+        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 10" height="937px" style="margin-bottom: 30px;">
+            <video src="resource/main_video1.mp4" autoplay muted loop></video>
 
             <div class="sns">
                 <ul>
@@ -666,7 +652,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video2.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -680,7 +666,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="3 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="3 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video3.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -695,7 +681,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="4 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="4 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video4.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -710,7 +696,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="5 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="5 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video5.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -725,7 +711,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="6 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="6 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video6.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -740,7 +726,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="7 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="7 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video7.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -755,7 +741,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="8 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="8 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video8.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -769,7 +755,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="9 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="9 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video9.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -783,7 +769,7 @@
             </div>
 
         </div>
-        <div class="swiper-slide" role="group" aria-label="10 / 10" style="height: 937px; margin-bottom: 30px;">
+        <div class="swiper-slide" role="group" aria-label="10 / 10" height="937px" style="margin-bottom: 30px;">
             <video src="resource/main_video10.mp4" autoplay muted loop></video>
 
             <div class="sns">
@@ -848,23 +834,23 @@
   
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        mousewheel: true,
-        speed: 500,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            mousewheel: true,
+            speed: 500,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+        });
 
         $(function () {
             $("#slideUpBtn").on("click", function() {
-                $(".action").slideUp();
+                $(".action").slideUp(1000);
             })
             $("#slideDownBtn").on("click", function() {
-                $(".action").slideDown();
+                $(".action").slideDown(1500);
             })
         })
     </script>
