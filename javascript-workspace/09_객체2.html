@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체2</title>
+    <style>
+        .area{
+            background: lightblue;
+            border : 1px solid black;
+            height : 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>객체2</h1>
+    <h3>* 객체 배열을 사용한 다량의 데이터 관리</h3>
+
+    <button onclick="test1()">실행확인</button>
+    <div id="area1" class="area"></div>
+
+    <script>
+        function test1(){
+            let student0 = {name:"김갑생", java:100, oracle:90, html:90, css:60};
+            let student1 = {name:"나훈아", java:80, oracle:60, html:80, css:70};
+            let student2 = {name:"홍길동", java:50, oracle:80, html:75, css:65};
+            let student3 = {name:"임꺽정", java:70, oracle:100, html:20, css:90};
+
+            let students = [];
+
+            students.push(student0);
+            students.push(student1);
+            students.push(student2);
+            students.push(student3);
+        }
+    </script>
+</body>
+</html>
